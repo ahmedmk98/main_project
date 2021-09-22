@@ -34,7 +34,7 @@ firebase.auth().onAuthStateChanged(function(user) {
       var errorMessage = error.message;
   
       window.alert("Error : " + errorMessage);
-  
+      
       // ...
     });
   
