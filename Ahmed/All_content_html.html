@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			body{
+				background-color: black;
+				background-image: url(img/black_kku.jpeg);
+				background-repeat: no-repeat;
+				background-attachment: scroll;
+				background-size: 100%;
+				background-position-y: 210px;
+				background-position-x: center;
+			}
+			.img_kku{
+				position: absolute;
+                left: 0px;
+                top: 0px;
+			}
+			.green_block{
+				background: limegreen;
+				position: absolute;
+				left: 0px;
+                top: 0px;
+				width: 1263px; 
+				height: 100px;
+			}
+			.green_block_down{
+				background: limegreen;
+				position: absolute;
+				left: 0px;
+                bottom: -180px;
+				width: 1263px; 
+				height: 100px;
+				border-color: white;
+				border-style: solid ;
+				border-width: 4px 0px 0px 0px ;
+			}
+			.boxoftitle{
+				background: white;
+				position: absolute;
+				font-size: 18px;
+				right: 14px;
+                top: 15px;
+				width: 222px; 
+				height: 47px;
+				color: black;
+				line-height: 45px;
+                vertical-align: middle;
+                text-align: center;
+				border-color: black;
+                border-radius: 17px;
+				border-style: solid ;
+				border-width: 2px;
+			}
+			form.searchbox input[type=text]{
+				background-color: white ;
+				position: absolute;
+				font-size: 18px;
+				left: 300px;
+                top: 15px;
+				width: 350px; 
+				height: 47px;
+				color: black;
+				line-height: 45px;
+                vertical-align: middle;
+                text-align: left;
+				border-color: black;
+                border-radius: 0px 17px 17px 0px;
+				border-style: solid ;
+				border-width: 2px;
+			}
+			form.searchbox input[type=text]:hover{
+				background-color: whitesmoke ;
+				position: absolute;
+				font-size: 18px;
+				left: 300px;
+                top: 15px;
+				width: 350px; 
+				height: 47px;
+				line-height: 45px;
+                vertical-align: middle;
+                text-align: left;
+				border-color: darkblue;
+                border-radius: 0px 17px 17px 0px;
+				border-style: solid ;
+				border-width: 3px;
+			}
+			form.searchbox button{
+				color: black;
+				background-color: grey;
+				position: absolute;
+				left: 607px;
+                top: 15px;
+				width: 50px; 
+				height: 53px;
+				cursor: pointer;
+				border-color: black;
+                border-radius: 15px;
+				border-style: solid ;
+				border-width: 2px;
+				background-image: url(img/search.png);
+                background-size: 31px;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-position: 7%;
+				-moz-border-radius: 0 15px 15px 0;
+                -webkit-border-radius: 0 15px 15px 0;
+			}
+			.lines_big{
+				background: limegreen;
+				position: absolute;
+				left: 0px;
+				top: 100px;
+				width: 1004px; 
+				height: 110px;
+				border-color: white;
+				border-style: solid ;
+				border-width: 4px;
+			}
+			.line_small{
+				background: white;
+				position: absolute;
+				right: 0px;
+				top: 100px;
+				width: 400px; 
+				border-color: white;
+				border-style: solid ;
+				border-width: 2px; 
+			}
+			.information_back{
+				background: grey;
+				position: absolute;
+				right: 1px;
+				top: 104px;
+				width: 250px;
+				height: 150px;
+				border-radius: 0 0px 15px 15px;
+			}
+			.information_front{
+				background: white;
+				color: black;
+				position: absolute;
+				font-size: 17px;
+				font-weight: bold;
+				line-height: 20px;
+                vertical-align: baseline;
+                text-align: center;
+				right: 15px;
+				top: 115px;
+				width: 220px;
+				height: 125px;
+				border-radius: 15px;
+			}
+			.Announcemment_back{
+				background: grey;
+				position: absolute;
+				right: 1px;
+				top: 270px;
+				width: 250px;
+				height: 210px;
+				border-radius: 15px;
+			}
+			.Announcemment_front1{
+				background: white;
+				color: black;
+				position: absolute;
+				font-size: 17px;
+				font-weight: bold;
+				line-height: 20px;
+                vertical-align: baseline;
+                text-align: center;
+				right: 15px;
+				top: 345px;
+				width: 220px;
+				height: 125px;
+				border-radius: 15px;
+			}
+			.Announcemment_front2{
+				background: white;
+				color: black;
+				position: absolute;
+				font-size: 17px;
+				font-weight: bold;
+				line-height: 20px;
+                vertical-align: baseline;
+                text-align: center;
+				right: 15px;
+				top: 280px;
+				width: 220px;
+				height: 50px;
+				border-radius: 15px;
+			}
+			.Events_back{
+				background: grey;
+				position: absolute;
+				right: 1px;
+				top: 500px;
+				width: 250px;
+				height: 210px;
+				border-radius: 15px;
+			}
+			.Events_front1{
+				background: white;
+				color: black;
+				position: absolute;
+				font-size: 17px;
+				font-weight: bold;
+				line-height: 20px;
+                vertical-align: baseline;
+                text-align: center;
+				right: 15px;
+				top: 575px;
+				width: 220px;
+				height: 125px;
+				border-radius: 15px;
+			}
+			.Events_front2{
+				background: white;
+				color: black;
+				position: absolute;
+				font-size: 17px;
+				font-weight: bold;
+				line-height: 20px;
+                vertical-align: baseline;
+                text-align: center;
+				right: 15px;
+				top: 510px;
+				width: 220px;
+				height: 50px;
+				border-radius: 15px;
+			}
+			form.video button{
+				position: absolute;
+				left: 70px;
+                top: 118px;
+				width: 85px; 
+				height: 85px;
+				cursor: pointer;
+				border-color: white;
+                border-radius: 15px;
+				border-style: solid ;
+				border-width: 4px;
+				background-color: limegreen;
+				background-image: url(img/videoblack.png);
+                background-size: 75px;
+                background-repeat: no-repeat;
+                background-position: center;
+			}
+			form.video button:hover{
+				background-color: green;
+				background-image: url(img/video.png);
+			}
+			form.test button{
+				position: absolute;
+				left: 200px;
+                top: 118px;
+				width: 85px; 
+				height: 85px;
+				cursor: pointer;
+				border-color: white;
+                border-radius: 15px;
+				border-style: solid ;
+				border-width: 4px;
+				background-color: limegreen;
+				background-image: url(img/testblack.png);
+                background-size: 75px;
+                background-repeat: no-repeat;
+                background-position: center;
+			}
+			form.test button:hover{
+				background-color: green;
+				background-image: url(img/test.png);
+			}
+			form.examples button{
+				position: absolute;
+				left: 330px;
+                top: 118px;
+				width: 85px; 
+				height: 85px;
+				cursor: pointer;
+				border-color: white;
+                border-radius: 15px;
+				border-style: solid ;
+				border-width: 4px;
+				background-color: limegreen;
+				background-image: url(img/examplesblack.png);
+                background-size: 75px;
+                background-repeat: no-repeat;
+                background-position: center;
+			}
+			form.examples button:hover{
+				background-color: green;
+				background-image: url(img/examples.png);
+			}
+			form.courses button{
+				position: absolute;
+				left: 460px;
+                top: 118px;
+				width: 85px; 
+				height: 85px;
+				cursor: pointer;
+				border-color: white;
+                border-radius: 15px;
+				border-style: solid ;
+				border-width: 4px;
+				background-color: limegreen;
+				background-image: url(img/coursesblack.png);
+                background-size: 75px;
+                background-repeat: no-repeat;
+                background-position: center;
+			}
+			form.courses button:hover{
+				background-color: green;
+				background-image: url(img/courses.png);
+			}
+			form.forum button{
+				position: absolute;
+				left: 590px;
+                top: 118px;
+				width: 85px; 
+				height: 85px;
+				cursor: pointer;
+				border-color: white;
+                border-radius: 15px;
+				border-style: solid ;
+				border-width: 4px;
+				background-color: limegreen;
+				background-image: url(img/forumblack.png);
+                background-size: 75px;
+                background-repeat: no-repeat;
+                background-position: center;
+			}
+			form.forum button:hover{
+				background-color: green;
+				background-image: url(img/forum.png);
+			}
+			
+			form.bb button{
+				position: absolute;
+				left: 720px;
+                top: 118px;
+				width: 85px; 
+				height: 85px;
+				cursor: pointer;
+				border-color: white;
+                border-radius: 15px;
+				border-style: solid ;
+				border-width: 4px;
+				background-color: limegreen;
+				background-image: url(img/bb.png);
+                background-size: 65px;
+                background-repeat: no-repeat;
+                background-position: center;
+			}
+			form.bb button:hover{
+				background-color: green;
+			}
+			form.academic button{
+				position: absolute;
+				left: 850px;
+                top: 118px;
+				width: 85px; 
+				height: 85px;
+				cursor: pointer;
+				border-color: white;
+                border-radius: 15px;
+				border-style: solid ;
+				border-width: 4px;
+				background-color: limegreen;
+				background-image: url(img/KKU.png);
+                background-size: 65px;
+                background-repeat: no-repeat;
+                background-position: center;
+			}
+			form.academic button:hover{
+				background-color: green;
+			}
+			form.home button{
+				background-color: black;
+				position: absolute;
+				font-size: 13px;
+				font-weight: bold;
+				left: 150px;
+                top: 15px;
+				width: 75px; 
+				height: 53px;
+				color: white;
+				line-height: 45px;
+                vertical-align: middle;
+                text-align: center;
+                border-radius: 17px 0px 0px 17px;
+			}
+			form.home button:hover{
+				background-color: grey;
+			}
+			form.about_us button{
+				background-color: black;
+				position: absolute;
+				font-size: 13px;
+				font-weight: bold;
+				left: 225px;
+                top: 15px;
+				width: 75px; 
+				height: 53px;
+				color: white;
+				line-height: 45px;
+                vertical-align: middle;
+                text-align: center;
+                border-radius: 0px;
+			}
+			form.about_us button:hover{
+				background-color: grey;
+			}
+			.gmail{
+				background: white;
+				position: absolute;
+				font-size: 18px;
+				left: 45px;
+                bottom: -157px;
+				width: 333px; 
+				height: 47px;
+				color: black;
+				line-height: 45px;
+                vertical-align: middle;
+                text-align: center;
+				border-color: black;
+                border-radius: 17px;
+				border-style: solid;
+				border-width: 2px;
+			}
+			.accounts{
+				background: white;
+				position: absolute;
+				font-size: 18px;
+				right: 260px;
+                bottom: -157px;
+				width: 225px; 
+				height: 47px;
+				color: black;
+				line-height: 45px;
+                vertical-align: middle;
+                text-align: center;
+				border-color: black;
+                border-radius: 17px;
+				border-style: solid ;
+				border-width: 2px;
+			}
+			.location{
+				background: white;
+				position: absolute;
+				font-size: 18px;
+				left: 410px;
+                bottom: -157px;
+				width: 333px; 
+				height: 47px;
+				color: black;
+				line-height: 45px;
+                vertical-align: middle;
+                text-align: center;
+				border-color: black;
+                border-radius: 17px;
+				border-style: solid;
+				border-width: 2px;
+			}
+			form.twitter button{
+				position: absolute;
+				right: 180px;
+                bottom: -157px;
+				width: 50px; 
+				height: 50px;
+				cursor: pointer;
+				border-color: white;
+                border-radius: 10px;
+				border-style: solid ;
+				border-width: 1px;
+				background-color: white;
+				background-image: url(img/twitter.png);
+                background-size: 50px;
+                background-repeat: no-repeat;
+                background-position: center;
+			}
+			form.facebook button{
+				position: absolute;
+				right: 110px;
+                bottom: -157px;
+				width: 50px; 
+				height: 50px;
+				cursor: pointer;
+				border-color: white;
+                border-radius: 10px;
+				border-style: solid ;
+				border-width: 1px;
+				background-color: white;
+				background-image: url(img/facebook.png);
+                background-size: 50px;
+                background-repeat: no-repeat;
+                background-position: center;	
+			}
+			form.youtube button{
+				position: absolute;
+				right: 40px;
+                bottom: -157px;
+				width: 50px; 
+				height: 50px;
+				cursor: pointer;
+				border-color: white;
+                border-radius: 10px;
+				border-style: solid ;
+				border-width: 1px;
+				background-color: white;
+				background-image: url(img/youtube.png);
+                background-size: 50px;
+                background-repeat: no-repeat;
+                background-position: center;	
+			}
+			form.add button{
+				position: absolute;
+				left: 50px;
+                top: 242px;
+				width: 120px; 
+				height: 120px;
+				cursor: pointer;
+				border-color: white;
+                border-radius: 15px;
+				border-style: solid ;
+				border-width: 3px;
+				background-color: limegreen;
+				background-image: url(img/add.png);
+                background-size: 75px;
+                background-repeat: no-repeat;
+                background-position-x: center;
+				background-position-y: 10px;
+			}
+			form.add button:hover{
+				background-color: green;
+			}
+			.add_block{
+				background: white;
+				color: black;
+				position: absolute;
+				font-size: 12px;
+				font-weight: bold;
+				line-height: 15px;
+                vertical-align: baseline;
+                text-align: center;
+				left: 60px;
+				top: 335px;
+				width: 100px;
+				height: 20px;
+				border-radius: 15px;
+			}
+			form.chat button{
+				position: absolute;
+				left: 225px;
+                top: 242px;
+				width: 120px; 
+				height: 120px;
+				cursor: pointer;
+				border-color: white;
+                border-radius: 15px;
+				border-style: solid ;
+				border-width: 3px;
+				background-color: limegreen;
+				background-image: url(img/chat.png);
+                background-size: 75px;
+                background-repeat: no-repeat;
+                background-position-x: center;
+				background-position-y: 10px;
+			}
+			form.chat button:hover{
+				background-color: green;
+			}
+			.chat_block{
+				background: white;
+				color: black;
+				position: absolute;
+				font-size: 12px;
+				font-weight: bold;
+				line-height: 15px;
+                vertical-align: baseline;
+                text-align: center;
+				left: 235px;
+				top: 335px;
+				width: 100px;
+				height: 20px;
+				border-radius: 15px;
+	/* all down is for tooltiptext */
+			}
+			.videoline {
+				position: absolute;
+				left: 84px;
+                top: 111px;
+				display: inline-block;
+				color: white;
+				cursor: pointer;
+			}
+			.videoline .tooltiptext {
+				visibility: hidden;
+				width: 120px;
+				background-color: black;
+				color: white;
+				text-align: center;
+				border-radius: 6px;
+				padding: 5px 0;
+				position: absolute;
+				z-index: 1;
+				bottom: 100%;
+				left: 50%;
+				margin-left: -60px;
+			}
+			.videoline:hover .tooltiptext {
+				visibility: visible;
+			}
+			.testline {
+				position: absolute;
+				left: 215px;
+                top: 111px;
+				display: inline-block;
+				color: white;
+				cursor: pointer;
+			}
+			.testline .tooltiptext {
+				visibility: hidden;
+				width: 120px;
+				background-color: black;
+				color: white;
+				text-align: center;
+				border-radius: 6px;
+				padding: 5px 0;
+				position: absolute;
+				z-index: 1;
+				bottom: 100%;
+				left: 50%;
+				margin-left: -60px;
+			}
+			.testline:hover .tooltiptext {
+				visibility: visible;
+			}
+			.examplesline {
+				position: absolute;
+				left: 345px;
+                top: 111px;
+				display: inline-block;
+				color: white;
+				cursor: pointer;
+			}
+			.examplesline .tooltiptext {
+				visibility: hidden;
+				width: 120px;
+				background-color: black;
+				color: white;
+				text-align: center;
+				border-radius: 6px;
+				padding: 5px 0;
+				position: absolute;
+				z-index: 1;
+				bottom: 100%;
+				left: 50%;
+				margin-left: -60px;
+			}
+			.examplesline:hover .tooltiptext {
+				visibility: visible;
+			}
+			.coursesline {
+				position: absolute;
+				left: 475px;
+                top: 111px;
+				display: inline-block;
+				color: white;
+				cursor: pointer;
+			}
+			.coursesline .tooltiptext {
+				visibility: hidden;
+				width: 120px;
+				background-color: black;
+				color: white;
+				text-align: center;
+				border-radius: 6px;
+				padding: 5px 0;
+				position: absolute;
+				z-index: 1;
+				bottom: 100%;
+				left: 50%;
+				margin-left: -60px;
+			}
+			.coursesline:hover .tooltiptext {
+				visibility: visible;
+			}
+			.forumline {
+				position: absolute;
+				left: 605px;
+                top: 111px;
+				display: inline-block;
+				color: white;
+				cursor: pointer;
+			}
+			.forumline .tooltiptext {
+				visibility: hidden;
+				width: 120px;
+				background-color: black;
+				color: white;
+				text-align: center;
+				border-radius: 6px;
+				padding: 5px 0;
+				position: absolute;
+				z-index: 1;
+				bottom: 100%;
+				left: 50%;
+				margin-left: -60px;
+			}
+			.forumline:hover .tooltiptext {
+				visibility: visible;
+			}
+	/* here will ends tooltiptext */
+		</style>
+	</head>
+	<body>
+		<div class="green_block"> </div>
+		<div class="green_block_down"> </div>
+		<div class="img_kku"> <img src="img/KKU.png", width="123px" height="100px" alt="img for KKU"> </div>
+		<div class="boxoftitle"> Markup Language </div>
+		<div class="lines_big"> </div>
+		<div class="line_small"> </div>
+		<div class="information_back"> </div>
+		<div class="information_front"> </br> Number of hours: 4 </br> ---------- </br> Level: 8 </br> ---------- </br> Course code: 012Cs</div>
+		<div class="Announcemment_back"> </div>
+		<div class="Announcemment_front1"> </br> welcome this will by first varsion of this course in our website</div>
+		<div class="Announcemment_front2"> </br> Announcemment of course </div>
+		<div class="Events_back"> </div>
+		<div class="Events_front1"> </br> here will give you all importance news about this course </div>
+		<div class="Events_front2"> </br> Events of course </div>
+		<div class="gmail"> Our e-mail is: forproject1998@gmail.com </div>
+		<div class="location"> KSA - Asiri region - Abha city - qurayqar </div>
+		<div class="accounts"> Our social media accounts: </div>
+
+		    <!--All in below will use database-->
+		<form class="youtube" action="/action_page.php">
+			<button type="submit"> <i class="youtube"></i> </button>
+		</form>
+			<!---------------------------------->
+		<form class="twitter" action="/action_page.php">
+			<button type="submit"> <i class="twitter"></i> </button>
+		</form>
+			<!---------------------------------->
+		<form class="facebook" action="/action_page.php">
+			<button type="submit"> <i class="facebook"></i> </button>
+		</form>
+			<!---------------------------------->
+		<form class="add" action="/action_page.php">
+			<button type="submit"> <i class="add"></i> </button>
+		</form>
+			<!---------------------------------->
+		<form class="chat" action="/action_page.php">
+			<button type="submit"> <i class="chat"></i> </button>
+		</form>
+			<!---------------------------------->
+		<form class="searchbox" action="/action_page.php">
+			<input type="text" placeholder="Search..." name="searchbox">
+			<button type="submit"> <i class="searchbox"></i> </button>
+		</form>
+			<!---------------------------------->
+		<form class="home" action="/action_page.php">
+			<button type="submit"> <i class="home"></i> Home </button>
+		</form>
+		    <!---------------------------------->
+		<form class="about_us" action="/action_page.php">
+			<button type="submit"> <i class="about_us"></i> About us </button>
+		</form>
+			<!---------------------------------->
+		<form class="video" action="/action_page.php">
+			<button type="submit"> <i class="video"></i> </button>
+		</form>
+		    <!---------------------------------->
+		<form class="test" action="/action_page.php">
+			<button type="submit"> <i class="test"></i> </button>
+		</form>
+			<!---------------------------------->
+		<form class="examples" action="/action_page.php">
+			<button type="submit"> <i class="examples"></i> </button>
+		</form>
+			<!---------------------------------->
+		<form class="courses" action="/action_page.php">
+			<button type="submit"> <i class="courses"></i> </button>
+		</form>
+			<!---------------------------------->
+		<form class="forum" action="/action_page.php">
+			<button type="submit"> <i class="forum"></i> </button>
+		</form>
+			<!---------------------------------->
+		<form class="bb" action="https://mysso.kku.edu.sa/cas/login?service=http%3A//www.kku.edu.sa/ar/casservice%3Fdestination%3D/user/login%253Fdestination%253Dar%25252Fmykku" target="_blank">
+			<button type="submit"> <i class="bb"></i> </button>
+		</form>
+			<!---------------------------------->
+		<form class="academic" action="https://www.kku.edu.sa/en" target="_blank">
+			<button type="submit"> <i class="academic"></i> </button>
+		</form>
+			<!---------------------------------->
+		<div class="add_block"> Add your content </div>
+		<div class="chat_block"> Order status </div>
+		<div class="videoline"> ----------- <span class="tooltiptext"> Videos </span> </div>
+		<div class="testline"> ----------- <span class="tooltiptext"> Tests </span> </div>
+		<div class="examplesline"> ----------- <span class="tooltiptext"> Examples </span> </div>
+		<div class="coursesline"> ----------- <span class="tooltiptext"> Courses </span> </div>
+		<div class="forumline"> ----------- <span class="tooltiptext"> Forums </span> </div>
+	</body>
+</html>
