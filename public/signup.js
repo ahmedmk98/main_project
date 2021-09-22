@@ -31,6 +31,8 @@
     alert("SignOut Successfully from System");
   }*/
 
+  ////
+
   firebase.auth().onAuthStateChanged((user)=>{
     if(user){
       var email = user.email;
