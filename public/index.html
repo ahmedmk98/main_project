@@ -228,9 +228,9 @@
             </div>
 
 
-                <span class="Forgot"> <a href="reset.html">Forgot Password</a> </span>
+                <span class="psw"> <a href="#" onclick="forgotPass()">Forgot Password</a> </span>
             </br><p> </p>
-                <span class="singin"> <a href="signup.html">Create new account?</a> </span>
+                <span class="singin"> <a href="create.html">Create new account?</a> </span>
         </form>
         <!--to here-->
         </div>
@@ -248,17 +248,18 @@
     // Your web app's Firebase configuration
     // For Firebase JS SDK v7.20.0 and later, measurementId is optional
     var firebaseConfig = {
-        apiKey: "AIzaSyBZDobon7F9McVCUiOQdnolSjuylU-A5zo",
-  authDomain: "project-c03ca.firebaseapp.com",
-  projectId: "project-c03ca",
-  storageBucket: "project-c03ca.appspot.com",
-  messagingSenderId: "71660938145",
-  appId: "1:71660938145:web:b4e7bf22f4d3ec4b8221e0",
-  measurementId: "G-60DHFFX14C"
-    };
-    // Initialize Firebase
-    //firebase.initializeApp(firebaseConfig);
-    //firebase.analytics();
+    apiKey: "AIzaSyBZDobon7F9McVCUiOQdnolSjuylU-A5zo",
+    authDomain: "project-c03ca.firebaseapp.com",
+    projectId: "project-c03ca",
+    storageBucket: "project-c03ca.appspot.com",
+    messagingSenderId: "71660938145",
+    appId: "1:71660938145:web:b4e7bf22f4d3ec4b8221e0",
+    measurementId: "G-60DHFFX14C"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+
+  const auth =  firebase.auth();
   </script>
   <script src="index.js"></script>
 </body>
