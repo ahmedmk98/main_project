@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="UTF-8"/>
-        <title>Assistant academic educational site</title>
+        <title>Reset password</title>
         <meta name="description" content="Assistant academic educational site or AAES is right way to success"/>
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
         <style>
             body{
                 background-color: rgb(229, 229, 229);
@@ -25,20 +27,16 @@
             .titles {
                 position: absolute;
                 font-size: 27px;
-                font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-family: Cursive;
                 font-weight: bold;
                 left: 15%;
                 top: 385px;
-            }
-            .img_KKU {
-                position: absolute;
-                right: 16%;
-                top: 125px;
+                color: lightseagreen;
             }
             .button_position {
                 position: absolute;
                 right: 17%;
-                top: 375px;
+                top: 250px;
                 text-align: center;
             }
             input[type=button]:hover {
@@ -53,6 +51,20 @@
                 outline-color: black;
                 outline-width: 1.5px;
                 }
+            input[type=text]:hover {
+                border-color: blue;
+                border-radius: 25px;
+                width: 100%;
+                padding: 10px;
+                box-sizing: border-box;
+                outline-color: black;
+                outline-width: 1.5px;
+                line-height: 20px;
+                vertical-align: middle;
+                text-align: center;
+                vertical-align: middle;
+                text-align: center;
+                }
             input[type=email]:hover {
                 border-color: blue;
                 border-radius: 25px;
@@ -64,14 +76,9 @@
                 line-height: 20px;
                 vertical-align: middle;
                 text-align: center;
-                background-image: url(img/parson.png);
-                background-size: 31px;
-                background-repeat: no-repeat;
-                background-position: center;
-                background-position: 7%;
                 }
-                input[type=password]:hover {
-                border-color: blue;
+            input[type=text] {
+                border-color: black;
                 border-radius: 25px;
                 width: 100%;
                 padding: 10px;
@@ -81,7 +88,7 @@
                 line-height: 20px;
                 vertical-align: middle;
                 text-align: center;
-                background-image: url(img/lock.png);
+                background-image: url(img/parson.png);
                 background-size: 31px;
                 background-repeat: no-repeat;
                 background-position: center;
@@ -98,30 +105,13 @@
                 line-height: 20px;
                 vertical-align: middle;
                 text-align: center;
-                background-image: url(img/parson.png);
+                background-image: url(img/mail.png);
                 background-size: 31px;
                 background-repeat: no-repeat;
                 background-position: center;
                 background-position: 7%;
             }
-            input[type=password] {
-                border-color: black;
-                border-radius: 25px;
-                width: 100%;
-                padding: 10px;
-                box-sizing: border-box;
-                outline-color: black;
-                outline-width: 1.5px;
-                line-height: 20px;
-                vertical-align: middle;
-                text-align: center;
-                background-image: url(img/lock.png);
-                background-size: 31px;
-                background-repeat: no-repeat;
-                background-position: center;
-                background-position: 7%;
-            }
-            input[type=button], input[type=submit], input[type=reset] {
+            input[type=button], input[type=button], input[type=reset] {
                 background-color: limegreen;
                 border: none;
                 color: white;
@@ -180,7 +170,7 @@
             .google_translate{
                 position: absolute;
                 left: -730px;
-                top: -370px;
+                top: -240px;
                 text-align: center;
                 background-color: limegreen;
                 border: none;
@@ -193,77 +183,60 @@
                 outline-color: black;
                 outline-width: 1.5px;
             }
-        </style>
-        <script type="text/javascript">
-            function googleTranslateElementInit() {
-              new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');}
-            </script>
-            <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
-            </script>
+            </style>
+            <script type="text/javascript">
+                function googleTranslateElementInit() {
+                  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');}
+                </script>
+                <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+                </script>
     </head>
     <body>
-        <div class = "img_content"> <img src="img/content.png" width=200 height=200 alt="img for content"> </div>
-        <div class = "titles">Assistant academic </br> educational site</div>
+        <main>
+        <div class = "img_content"> <img src="img/question.png" width=200 height=200 alt="img for content"> </div>
+        <div class = "titles"> "there is no </br> problem" </div>
         <div class = "line_in_middle"> </div>
-        <div class = "img_KKU"> <img src="img/KKU.png" width=220 height=220 alt="img for KKU"> </div>
         <div class = "button_position">
         <div id= "google_translate_element" class=google_translate></div>
         <!--All in below will use database-->
-        <!--<form action="action_page.php" method="post">  
-            
-            
-
-               <!-make function its name login_div here start--> 
-               <div id="login_div" >
-                <input type="email" placeholder="Enter email" id="email_field" />
-                <input type="password" placeholder="Enter Password" id="password_field" />
-                <button onclick="login()">Login</button></br><p> </p><!--here end-->
-            </div>
-
-
-            <!--Add here function after press user login transtion to new page -->
-            <div id="user_div">
-                <p id="user_para">Welcome  Assistant academic educational web login Example. You're currently logged in.</p>
-                   <button onclick="logout()">Logout</button>
-            </div>
-
-
-                <span class="psw"> <a href="#" onclick="forgotPass()">Forgot Password</a> </span>
+        <!--<form action="action_page.php" method="post">-->            
+               <!---- <label for="username"> </label>
+                <input type="text" placeholder="username" name="username" required>
+            </br><p> </p>-->
+                <label for="mail"> </label>
+                <input id="mail" type="email" placeholder="mail" name="mail" required> 
             </br><p> </p>
-                <span class="singin"> <a href="create.html">Create new account?</a> </span>
-        </form>
+                <button id="resetPassword">Confirm</button>
+            </br><p> </p>
+            <span class="psw"> <a href="index.html">Back to main page?</a> </span>
+       <!---- </form>-->
         <!--to here-->
-        </div>
-    </div>
-</div>
         <div class="quarter_circle_top_left"></div>
         <div class="quarter_circle_top_right"></div>
         <div class="quarter_circle_bottom_left"></div>
         <div class="quarter_circle_bottom_right"></div>
-
-
-                 <!--REMOVE COMMENT TO WORK FIREBASE-->
- <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
- ‏
-
-  <script>
-    // Your web app's Firebase configuration
-    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-    var firebaseConfig = {
-    apiKey: "AIzaSyBZDobon7F9McVCUiOQdnolSjuylU-A5zo",
-    authDomain: "project-c03ca.firebaseapp.com",
-    projectId: "project-c03ca",
-    storageBucket: "project-c03ca.appspot.com",
-    messagingSenderId: "71660938145",
-    appId: "1:71660938145:web:b4e7bf22f4d3ec4b8221e0",
-    measurementId: "G-60DHFFX14C"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-
-  const auth =  firebase.auth();
-  </script>
-  <script src="index.js"></script>
-
-</body>
+    </main>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+      <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+      <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyBZDobon7F9McVCUiOQdnolSjuylU-A5zo",
+  authDomain: "project-c03ca.firebaseapp.com",
+  projectId: "project-c03ca",
+  storageBucket: "project-c03ca.appspot.com",
+  messagingSenderId: "71660938145",
+  appId: "1:71660938145:web:b4e7bf22f4d3ec4b8221e0",
+  measurementId: "G-60DHFFX14C"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+        </script>
+  
+     <!-- Initialize Firebase -->
+     <!--<script src="/__/firebase/init.js"></script>-->
+      <script src="./js/reset.js"></script>   
+    </body>
 </html>

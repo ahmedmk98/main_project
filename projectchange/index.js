@@ -8,10 +8,11 @@ firebase.auth().onAuthStateChanged(function(user) {
     var user = firebase.auth().currentUser;
 
     if(user != null){
+      window.location.href="file:///C:/Users/win/Downloads/projectchange/personal.html";
+      //var email_id = user.email;
+      //document.getElementById("user_para").innerHTML = "Welcome User : " + email_id;
 
-      var email_id = user.email;
-      document.getElementById("user_para").innerHTML = "Welcome User : " + email_id;
-
+  
     }
 
   } else {
@@ -32,12 +33,14 @@ function login(){
     // Handle Errors here.
     var errorCode = error.code;
     var errorMessage = error.message;
-
-    window.alert("Error : " + errorMessage);
-   
-
+     //Swal.errorMessage({
+     // icon: 'error',
+      //title: 'Oops...',
+      //text: 'incorrect password or e-mail!',
+     //});
+    window.alert("Error :"+errorMessage  );
+      
     // ...
-    
   });
 
 }
