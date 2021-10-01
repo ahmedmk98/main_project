@@ -8,9 +8,9 @@ firebase.auth().onAuthStateChanged(function(user) {
     var user = firebase.auth().currentUser;
 
     if(user != null){
-      window.location.href="file:///C:/Users/win/Downloads/projectchange/personal.html";
-      //var email_id = user.email;
-      //document.getElementById("user_para").innerHTML = "Welcome User : " + email_id;
+     // window.location.href="file:///C:/Users/win/Downloads/projectchange/personal.html";
+      var email_id = user.email;
+      document.getElementById("user_para").innerHTML = "Welcome User : " + email_id;
 
   
     }
