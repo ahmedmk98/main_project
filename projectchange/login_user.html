@@ -43,7 +43,7 @@
             }
             input[type=button]:hover {
                 color: white;
-                background-color: green;
+                background-color: rgb(10, 153, 10);
                 border: none;
                 padding: 10px;
                 text-decoration: none;
@@ -99,7 +99,7 @@
                 vertical-align: middle;
                 text-align: center;
                 background-image: url(img/parson.png);
-                background-size: 31px;
+                background-size: 28px;
                 background-repeat: no-repeat;
                 background-position: center;
                 background-position: 7%;
@@ -116,7 +116,7 @@
                 vertical-align: middle;
                 text-align: center;
                 background-image: url(img/lock.png);
-                background-size: 31px;
+                background-size: 28px;
                 background-repeat: no-repeat;
                 background-position: center;
                 background-position: 7%;
@@ -219,24 +219,30 @@
                 <input type="email" placeholder="Enter email" id="email_field" />
                 <input type="password" placeholder="Enter Password" id="password_field" />
                 <button onclick="login()">Login</button></br><p> </p><!--here end-->
+                <span class="Forgot"> <a href="#" onclick="forgotPass()">Forgot Password</a> </span>
+            </br><p> </p>
+                <span class="singup"> <a href="create.html">Create new account?</a> </span>
             </div>
 
 
             <!--Add here function after press user login transtion to new page -->
-            <div id="user_div">
-                <p id="user_para">Welcome  Assistant academic educational web login Example. You're currently logged in.</p>
-                   <button onclick="logout()">Logout</button>
-            </div>
+           
 
-
-                <span class="psw"> <a href="#" onclick="forgotPass()">Forgot Password</a> </span>
-            </br><p> </p>
-                <span class="singin"> <a href="create.html">Create new account?</a> </span>
+             
+               
         </form>
+        <div id="user_div">
+            <!--<p id="user_para">Welcome  Assistant academic educational web login Example. You're currently logged in.</p>-->
+               <button onclick="logout()">Logout</button>
+               <span class="psw"> <a href="personal.html">continue</a> </span>
+               
+        </div>
+    
         <!--to here-->
         </div>
     </div>
 </div>
+
         <div class="quarter_circle_top_left"></div>
         <div class="quarter_circle_top_right"></div>
         <div class="quarter_circle_bottom_left"></div>

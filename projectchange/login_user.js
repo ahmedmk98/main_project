@@ -8,7 +8,7 @@ firebase.auth().onAuthStateChanged(function(user) {
     var user = firebase.auth().currentUser;
 
     if(user != null){
-      //window.location.replace="personal.html";
+     // window.location.replace="file:///C:/myAllproject/Pr0ject1.1/main_project/projectchange/personal.html";
       var email_id = user.email;
       document.getElementById("user_para").innerHTML = "Welcome User : " + email_id;
 
