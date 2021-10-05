@@ -32,12 +32,13 @@
             }
             .img_KKU {
                 position: absolute;
-                right: 16%;
-                top: 125px;
+                right: 15%;
+                top: 145px;
             }
             .button_position {
                 position: absolute;
-                right: 17%;
+                color: #17791a;
+                right: 10%;
                 top: 375px;
                 text-align: center;
             }
@@ -193,6 +194,48 @@
                 outline-color: black;
                 outline-width: 1.5px;
             }
+            form.Continue button {
+                border: 0;
+                border-radius: 0.90rem;
+                background: #32cd32;
+                color: rgb(248, 248, 248);
+                font-family: sans-serif;
+                font-size: 15px;
+                line-height: 1.2;
+                white-space: nowrap;
+                text-decoration: none;
+                padding: 7px 28px;
+                margin: 5px;
+                cursor: pointer;
+        }
+        button.Logout {
+            border: 0;
+            border-radius: 0.90rem;
+            background: #6d1600;
+            color: rgb(202, 223, 182);
+            font-family:  sans-serif;
+            font-size: 15px;
+            line-height: 1.2;
+            white-space: nowrap;
+            text-decoration: none;
+            padding: 7px 28px;
+            margin: 5px;
+            cursor: pointer;
+    }
+        button.Login {
+            border: 0;
+            border-radius: 0.90rem;
+            background: #32cd32;
+            color: rgb(255, 255, 255);
+            font-family:  sans-serif;
+            font-size: 15px;
+            line-height: 1.2;
+            white-space: nowrap;
+            text-decoration: none;
+            padding: 4px 25px;
+            margin: 5px;
+            cursor: pointer;
+        }
         </style>
         <script type="text/javascript">
             function googleTranslateElementInit() {
@@ -218,7 +261,7 @@
                <div id="login_div" >
                 <input type="email" placeholder="Enter email" id="email_field" />
                 <input type="password" placeholder="Enter Password" id="password_field" />
-                <button onclick="login()">Login</button></br><p> </p><!--here end-->
+                <button class="Login" onclick="login()">Login</button></br><p> </p><!--here end-->
                 <span class="Forgot"> <a href="#" onclick="forgotPass()">Forgot Password</a> </span>
             </br><p> </p>
                 <span class="singup"> <a href="create.html">Create new account?</a> </span>
@@ -232,9 +275,12 @@
                
         <!--</form>-->
         <div id="user_div">
-            <!--<p id="user_para">Welcome  Assistant academic educational web login Example. You're currently logged in.</p>-->
-               <button onclick="logout()">Logout</button>
-               <span class="psw"> <a href="personal.html">continue</a> </span>
+               <p id="user_para">Welcome  Assistant academic educational web login Example. You're currently logged in.</p>
+               <form class="Continue" action="personal.html" method="GET">
+               <button type="submit"> <i class="Continue"></i> Continue </button>
+            </form>
+               <button class="Logout"  onclick="logout()">Logout</button>
+               <span class="psw"> </span>
                
         </div>
     
